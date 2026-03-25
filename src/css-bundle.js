@@ -10,6 +10,3 @@
 
 // Main stylesheet (includes base, components, layout, sections, pages)
 import './css/style.css';
-
-// Pages not imported by style.css that should also ship in the CDN bundle
-import './css/pages/subscribe-form.css';

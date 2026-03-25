@@ -1,0 +1,47 @@
+.skeleton {
+    background-color: var(--on-background);
+    animation: skeleton-animation 500ms linear infinite alternate;
+}
+
+@keyframes skeleton-animation {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+.skeleton-card .card-banner {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    border-radius: var(--radius-4);
+}
+
+.skeleton-card .card-title {
+    margin-block: 8px;
+    height: 16px;
+    width: 50%;
+}
+
+.skeleton-card .card-text {
+    height: 12px;
+    width: 80%;
+}
+
+.skeleton-card .showcase-banner {
+    aspect-ratio: 4 / 5;
+    width: 100%;
+}
+
+.skeleton-card .showcase-title {
+    margin-block: 10px;
+    height: 16px;
+    width: 70%;
+}
+
+.skeleton-card .showcase-text {
+    height: 12px;
+    width: 85%;
+    margin-bottom: 10px;
+}

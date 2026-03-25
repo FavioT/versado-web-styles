@@ -1,0 +1,42 @@
+.sidebar-category[data-side-bar-category] {
+  width: 100%;
+  margin: 16px 0px;
+  padding: 0px 24px;
+}
+
+[data-side-bar-category] .sidebar-title {
+  color: var(--onyx);
+  font-size: var(--fs-1);
+  letter-spacing: 0.8px;
+  font-weight: var(--weight-600);
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.sidebar-subtitle {
+  color: var(--onyx);
+  font-size: var(--fs-2);
+  font-weight: var(--weight-600);
+  padding: 0px 24px;
+}
+
+.sidebar-category-item {
+  display: flex;
+  margin: 0 0 10px;
+}
+
+.category-link {
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+}
+
+.category-link:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+.category-total-products {
+  margin-left: 6px;
+  color: var(--spanish-gray);
+}

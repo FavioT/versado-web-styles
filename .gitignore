@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+css-dist/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Vite cache
+.vite/
+
+# Bundle visualizer
+stats.html
+
+# Editor
+.vscode/settings.json
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

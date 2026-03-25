@@ -1,0 +1,42 @@
+.badge {
+    background-color: var(--error);
+    color: var(--white);
+    height: 16px;
+    min-width: 16px;
+    padding-inline: 4px;
+    border-radius: var(--radius-pill);
+}
+
+.tags {
+    text-align: center;
+}
+
+.tags .section-text {
+    max-width: 50ch;
+    margin-inline: auto;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-block-start: 24px;
+}
+
+.tags .badge-btn {
+    height: 40px;
+    border-radius: var(--radius-pill);
+    background-color: var(--image-background);
+    color: var(--on-badge-btn);
+    max-width: max-content;
+    padding-inline: 16px;
+    display: grid;
+    place-items: center;
+}
+
+.tags .section-text {
+    max-width: 50ch;
+    margin-inline: auto;
+}

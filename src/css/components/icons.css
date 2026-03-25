@@ -1,0 +1,28 @@
+/**
+ * Estilos para iconos SVG locales
+ * Reemplazo de Material Symbols Outlined
+ */
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+/* Estilos específicos para iconos SVG sprites */
+.icon-svg {
+    fill: currentColor;
+}
+
+/* Mantener compatibilidad con clases existentes */
+.icon.bookmark,
+.icon.bookmark-add {
+    width: 24px;
+    height: 24px;
+}
+
+.icon.trailing-icon {
+    margin-left: auto;
+}

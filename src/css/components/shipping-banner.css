@@ -1,0 +1,85 @@
+/*
+|--------------------------------------------------------------------------
+| SHIPPING BANNER
+|--------------------------------------------------------------------------
+*/
+:root {
+  --shipping-banner-height: 40px; /* ajustar según el alto real */
+}
+
+[data-shipping-banner] {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--shipping-banner-height);
+  z-index: 1000;
+}
+
+body {
+  padding-bottom: calc(var(--shipping-banner-height) + 65px);
+}
+
+.shipping-banner[data-shipping-banner] {
+    color: var(--white);
+    cursor: default;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #3a3a3a;
+    z-index: 4;
+    width: 100%;
+    padding-inline: 10px;
+    font-size: var(--fs-base);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    transition: all 0.5s ease-in-out, transform 0.3s ease-in-out;
+    animation: slideUp 0.5s ease-in-out forwards;
+    min-width: fit-content;
+    align-items: center;
+}
+
+.shipping-banner[data-shipping-banner] img {
+    height: 3rem;
+}
+
+@media (max-width: 767px) {
+    .shipping-banner[data-shipping-banner] img {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 438px) {
+    .shipping-banner[data-shipping-banner] {
+        font-size: var(--fs-label-medium);
+    }
+}
+
+@media (min-width: 512px) {
+    .shipping-banner[data-shipping-banner] {
+        font-size: var(--fs-body-large);
+    }
+}
+
+@media (min-width: 680px) {
+    .shipping-banner[data-shipping-banner] {
+        font-size: var(--fs-label-medium);
+        padding-block: 8px;
+    }
+
+    body {
+        padding-bottom: var(--shipping-banner-height);
+    }
+}

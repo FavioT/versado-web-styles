@@ -1,0 +1,195 @@
+/**
+ * Componente de notificaciones de error
+ * Sistema toast para mostrar mensajes al usuario
+ */
+
+.error-notification {
+    position: fixed;
+    top: -100px;
+    right: 24px;
+    min-width: 320px;
+    max-width: 420px;
+    background: var(--surface-container-high);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-2);
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.error-notification.show {
+    top: 24px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.error-notification.hide {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+}
+
+.error-notification__content {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+}
+
+.error-notification__icon {
+    flex-shrink: 0;
+    font-size: 24px;
+    margin-top: 2px;
+}
+
+.error-notification__message {
+    flex: 1;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--on-surface);
+}
+
+.error-notification__close {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: var(--radius-small);
+    color: var(--on-surface-variant);
+    transition: all 0.2s;
+    margin: -4px -4px 0 0;
+}
+
+.error-notification__close:hover {
+    background: var(--surface-container-highest);
+    color: var(--on-surface);
+}
+
+.error-notification__close .material-symbols-outlined {
+    font-size: 20px;
+    display: block;
+}
+
+/* Variantes de tipo */
+.error-notification--error {
+    background: var(--error-container, #f44336);
+    color: var(--on-error-container, #fff);
+}
+
+.error-notification--error .error-notification__icon {
+    color: var(--error, #d32f2f);
+}
+
+.error-notification--error .error-notification__message {
+    color: var(--on-error-container, #fff);
+}
+
+.error-notification--error .error-notification__close {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.error-notification--error .error-notification__close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.error-notification--warning {
+    background: var(--warning-container, #ff9800);
+    color: var(--on-warning-container, #fff);
+}
+
+.error-notification--warning .error-notification__icon {
+    color: var(--warning, #f57c00);
+}
+
+.error-notification--warning .error-notification__message {
+    color: var(--on-warning-container, #fff);
+}
+
+.error-notification--warning .error-notification__close {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.error-notification--warning .error-notification__close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.error-notification--success {
+    background: var(--success-container, #4caf50);
+    color: var(--on-success-container, #fff);
+}
+
+.error-notification--success .error-notification__icon {
+    color: var(--success, #2e7d32);
+}
+
+.error-notification--success .error-notification__message {
+    color: var(--on-success-container, #fff);
+}
+
+.error-notification--success .error-notification__close {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.error-notification--success .error-notification__close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.error-notification--info {
+    background: var(--info-container, #2196f3);
+    color: var(--on-info-container, #fff);
+}
+
+.error-notification--info .error-notification__icon {
+    color: var(--info, #1976d2);
+}
+
+.error-notification--info .error-notification__message {
+    color: var(--on-info-container, #fff);
+}
+
+.error-notification--info .error-notification__close {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.error-notification--info .error-notification__close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .error-notification {
+        right: 16px;
+        left: 16px;
+        min-width: auto;
+        max-width: none;
+    }
+
+    .error-notification.show {
+        top: 16px;
+    }
+}
+
+/* Soporte para múltiples notificaciones */
+.error-notification:nth-child(2) {
+    top: calc(24px + 80px);
+}
+
+.error-notification:nth-child(3) {
+    top: calc(24px + 160px);
+}
+
+/* Reducir movimiento para usuarios con preferencia */
+@media (prefers-reduced-motion: reduce) {
+    .error-notification {
+        transition: opacity 0.3s;
+        transform: none !important;
+    }
+}

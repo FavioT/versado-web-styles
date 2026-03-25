@@ -1,0 +1,176 @@
+.btn {
+    height: 40px;
+    max-width: max-content;
+    padding-inline: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: var(--radius-4);
+    transition: var(--transition-short);
+}
+
+.btn .icon {
+    font-size: 1.8rem;
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.btn.has-icon {
+    padding-inline-start: 16px;
+}
+
+/* primary button */
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:where(:hover, :focus-visible):not(:active) {
+    background-color: var(--primary-hover);
+}
+
+/* secondary button */
+.btn-secondary {
+    background-color: var(--image-background);
+}
+
+/* ws button */
+.btn-ws {
+    background-color: var(--ws-green-1);
+    color: var(--white-1);
+}
+
+.btn-ws:where(:hover, :focus-visible):not(:active, :disabled) {
+    background-color: var(--ws-green-2);
+}
+
+/* badge button */
+.header .btn-badge {
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: var(--fs-label-small);
+    min-width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 50px;
+}
+
+/* filter button */
+.btn-filter {
+    padding-inline: 12px;
+}
+
+.btn-filter .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-filter.active {
+    position: fixed;
+    right: 16px;
+    z-index: 1;
+    box-shadow: var(--shadow-2);
+    border-radius: var(--radius-8);
+    height: 48px;
+    padding-inline: 16px;
+    gap: 12px;
+    transition: none;
+    animation: btn-filter-active 200ms var(--transition-timing-function) forwards;
+}
+
+@keyframes btn-filter-active {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.add-to-cart-button {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    background-color: var(--background);
+    border-radius: var(--radius-circle);
+}
+
+.social-btn {
+    position: fixed;
+    right: 16px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 64px;
+    max-width: 100%;
+    padding: 4px;
+    background-color: var(--white);
+    border-radius: var(--radius-circle);
+    box-shadow: var(--shadow-2);
+}
+
+.social-btn img {
+    max-width: 100%;
+}
+
+.whatsapp-btn {
+    bottom: 378px;
+}
+
+.instagram-btn {
+    bottom: 300px;
+}
+
+.facebook-btn {
+    bottom: 222px;
+}
+
+.tiktok-btn {
+    bottom: 144px;
+}
+
+.whatsapp-btn {
+    bottom: 144px;
+}
+
+@media (min-width: 768px) {
+    .social-btn img {
+        max-width: 100%;
+    }
+
+    .whatsapp-btn {
+        bottom: 330px;
+    }
+
+    .instagram-btn {
+        bottom: 252px;
+    }
+
+    .facebook-btn {
+        bottom: 174px;
+    }
+
+    .tiktok-btn {
+        bottom: 96px;
+    }
+
+    .whatsapp-btn {
+        bottom: 96px;
+    }
+}
+
+@media (min-width: 992px) {
+    .btn-filter,
+    .overlay[data-filter-toggler] {
+        display: none;
+    }
+}

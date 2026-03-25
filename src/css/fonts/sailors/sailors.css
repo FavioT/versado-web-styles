@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Sailors Condensed';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Sailors Condensed'), url(./sailors-condensed.ttf) format('truetype');
+    font-display: swap;
+}

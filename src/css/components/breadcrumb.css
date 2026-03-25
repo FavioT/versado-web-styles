@@ -1,0 +1,36 @@
+.breadcrumb-container {
+    padding-inline: 24px;
+}
+
+.breadcrumb-list {
+    padding: 10px 0px;
+    list-style: none;
+}
+
+/* Display list items side by side */
+.breadcrumb-list li {
+    display: inline-flex;
+    font-size: 18px;
+}
+  
+  /* Add a slash symbol (/) before/behind each list item */
+.breadcrumb-list li+li:before {
+    padding: 0 8px;
+    color: var(--primary-hover);
+    content: "\003e";
+}
+  
+  /* Add a color to all links inside the list */
+.breadcrumb-list li a {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--primary);
+    text-decoration: none;
+}
+  
+  /* Add a color on mouse-over */
+.breadcrumb-list li a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}

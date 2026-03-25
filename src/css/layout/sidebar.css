@@ -1,0 +1,297 @@
+/*
+|--------------------------------------------------------------------------
+| CART SIDEBAR
+|--------------------------------------------------------------------------
+*/
+.side-bar-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+    padding-block-end: 16px;
+}
+
+.side-bar-total,
+.side-bar-actions {
+    gap: 12px;
+    padding: 24px;
+}
+
+.side-bar-total {
+    display: none;
+}
+
+.side-bar-total.active {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.side-bar-actions {
+    display: flex;
+    border-block-start: 1px solid var(--outline);
+}
+
+.side-bar-actions .btn {
+    max-width: 100%;
+    width: 100%;
+}
+
+.side-bar-content::-webkit-scrollbar {
+    display: none;
+}
+
+.side-bar-content .product-showcase {
+    padding: 16px;
+}
+
+.side-bar-content .showcase-heading {
+    font-size: var(--fs-title-medium);
+    font-weight: var(--weight-medium);
+    color: var(--on-background);
+    letter-spacing: 0.8px;
+    margin-bottom: 15px;
+}
+
+.side-bar-content .showcase-container {
+    width: calc(100% - 40px);
+}
+
+.side-bar-content .showcase {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.side-bar-content .showcase:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.side-bar-content .showcase-img-box {
+    aspect-ratio: 4 / 5;
+}
+
+.side-bar-content .showcase-img {
+    -webkit-border-radius: var(--radius-4);
+    border-radius: var(--radius-4);
+}
+
+.side-bar-content .showcase-content {
+    width: -webkit-calc(100% - 90px);
+    width: calc(100% - 90px);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.side-bar-content .showcase-title {
+    color: var(--on-background);
+    font-size: var(--fs-label-large);
+    font-weight: var(--weight-regular);
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    letter-spacing: 0.5px;
+}
+
+.showcase-content .detail-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 75%;
+}
+
+.showcase-content .product-price-wrapper,
+.showcase-content .product-amount-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.product-amount-wrapper .icon {
+    font-size: 1.8rem;
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.showcase .add-to-cart-button {
+    margin-inline-start: auto;
+}
+
+.showcase .showcase-product-link {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow-y: hidden;
+    transition: var(--transition-short);
+}
+
+.showcase-product-link .showcase-title:where(:hover, :focus-visible) {
+    color: var(--primary);
+    font-size: 1em;
+}
+
+.side-bar-total-benefit[data-cart-total-benefits-content] {
+    padding-block-end: 16px;
+    padding-inline: 24px;
+}
+
+[data-cart-total-benefits-content] .cart-total-price.benefit {
+    font-size: var(--fs-1);
+    color: var(--ocean-green);
+    text-align: center;
+}
+
+[data-cart-total-benefits-content] .cart-total-price.benefit b {
+    text-transform: uppercase;
+}
+
+.filter-bar,
+.right-side-bar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    background-color: var(--background);
+    max-width: 400px;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    visibility: hidden;
+    transition: var(--transition-short);
+    z-index: 6;
+}
+
+.filter-bar.active {
+    visibility: visible;
+    transform: translateX(-400px);
+    transition: var(--transition-medium);
+}
+
+.filter-bar .title-wrapper {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.filter-bar .title-wrapper .title-medium {
+    margin-inline-end: auto;
+}
+
+.filter-bar .close-btn {
+    background-color: transparent;
+    margin: -8px;
+}
+
+.right-side-bar.active {
+    visibility: visible;
+    transform: translateX(-400px);
+    transition: var(--transition-medium);
+}
+
+.right-side-bar .title-wrapper {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.right-side-bar .title-wrapper .title-medium {
+    margin-inline-end: auto;
+}
+
+.right-side-bar .close-btn {
+    background-color: transparent;
+    margin: -8px;
+}
+
+.product-amount.contact-input-field {
+    padding: 2px 4px;
+    margin: 0;
+    width: 65%;
+    text-align: center;
+    font-size: var(--fs-body-large);
+    font-weight: var(--weight-medium);
+}
+
+.contact-input-field {
+    background-color: var(--white-2);
+    color: hsl(0, 0%, 13%);
+    font-size: var(--fs-body-medium);
+    padding: 15px;
+    border-radius: var(--radius-4);
+    outline: 1px solid transparent;
+    outline-offset: 0;
+    margin-block-end: 15px;
+}
+
+.filter-content {
+    -ms-scroll-chaining: none;
+    overscroll-behavior: contain;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease;
+    flex-grow: 1;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.filter-content::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-content .search-wrapper {
+    padding: 12px 24px;
+}
+
+.sidebar-menu-tags-list {
+  border-block-start: 1px solid var(--outline);
+}
+
+@media (min-width: 992px) {
+    .filter-bar,
+    .filter-bar.active {
+        all: unset;
+        position: sticky;
+        top: var(--header-height);
+        margin-block-start: -16px;
+        height: calc(100vh - (var(--header-height) + 40px));
+        max-width: 360px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-inline-end: 1px solid var(--outline);
+        overflow: auto;
+    }
+
+    .filter-bar::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .filter-bar::-webkit-scrollbar-thumb {
+        background-color: var(--alpha-20);
+    }
+
+    .filter-bar .close-btn {
+        display: none;
+    }
+
+    .filter-content {
+        overflow-y: visible;
+    }
+
+    .filter-content .search-wrapper {
+        padding-block-start: 0;
+    }
+}

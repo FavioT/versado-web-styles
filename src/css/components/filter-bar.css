@@ -1,0 +1,14 @@
+.tags-list-container {
+  display: contents;
+}
+
+.badge-btn {
+  height: 35px;
+  border-radius: var(--radius-pill);
+  background-color: var(--image-background);
+  color: var(--on-badge-btn);
+  max-width: max-content;
+  padding-inline: 9px;
+  display: grid;
+  place-items: center;
+}

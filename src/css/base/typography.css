@@ -1,0 +1,120 @@
+/*
+|--------------------------------------------------------------------------
+| TYPOGRAPHY
+|--------------------------------------------------------------------------
+*/
+
+.display-large {
+    font-family: var(--font-primary);
+    font-size: var(--fs-display-large);
+    font-weight: var(--weight-regular);
+    line-height: 32px;
+    letter-spacing: -0.25px;
+}
+
+.display-medium {
+    font-size: var(--fs-display-medium);
+    line-height: 36px;
+}
+
+.display-small {
+    font-family: var(--font-primary);
+    font-size: var(--fs-display-small);
+    font-weight: var(--weight-regular);
+    line-height: 32px;
+}
+
+.headline-small {
+    font-size: var(--fs-headline-small);
+    font-weight: var(--weight-regular);
+    line-height: 32px;
+}
+
+.title-medium {
+    font-size: var(--fs-title-medium);
+    font-weight: var(--weight-medium);
+    line-height: 24px;
+    letter-spacing: 0.15px;
+}
+
+.title-small {
+    font-size: var(--fs-title-small);
+    font-weight: var(--weight-medium);
+    line-height: 20px;
+    letter-spacing: 0.1px;
+}
+
+.body-large {
+    font-size: var(--fs-body-large);
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+.body-medium {
+    font-size: var(--fs-body-medium);
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
+
+.label-large {
+    font-size: var(--fs-label-large);
+    font-weight: var(--weight-medium);
+    line-height: 20px;
+    letter-spacing: 0.1px;
+}
+
+.label-medium {
+    font-size: var(--fs-label-medium);
+    font-weight: var(--weight-medium);
+    line-height: 16px;
+    letter-spacing: 0.5px;
+}
+
+.label-small {
+    font-size: var(--fs-label-small);
+    font-weight: var(--weight-medium);
+    line-height: 16px;
+    letter-spacing: 0.5px;
+}
+
+/* responsive for larger than 600px screen */
+
+@media (min-width: 600px) {
+    :root {
+        /* TYPOGRAPHY */
+
+        /* font size */
+        --fs-display-large: 3.6rem;
+        --fs-display-medium: 3.6rem;
+        --fs-display-small: 3rem;
+
+    }
+
+    /* TYPOGRAPHY */
+
+    .display-large,
+    .display-medium {
+        line-height: 44px;
+    }
+
+    .display-small {
+        line-height: 36px;
+    }
+
+    .title-small {
+        font-size: 1.6rem;
+        font-weight: var(--weight-medium);
+        line-height: 24px;
+        letter-spacing: 0.15px;
+    }
+}
+
+@media (min-width: 992px) {
+    .display-medium {
+        line-height: 52px;
+    }
+
+    .display-small {
+        line-height: 44px;
+    }
+}
